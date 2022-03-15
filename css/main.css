@@ -10,29 +10,21 @@ body h1 {
   margin: 0 0 10px 0;
 }
 
-body .flashcards {
-  background: #393939;
-  padding: 10px;
+body nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  background: #444;
 }
 
-body .flashcards .flashcard {
-  margin: 0 0 20px 0;
-  font-size: .8rem;
+body nav ul li {
+  margin: 0 10px 0 0;
 }
 
-body .flashcards .flashcard .front {
-  font-weight: bold;
-}
-
-body .flashcards .flashcard .front .category {
-  color: white;
-}
-
-body .flashcards .flashcard .back {
-  background: #111;
-  color: yellow;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: .7rem;
-  padding: 3px;
+body .page {
+  margin: 10px 0 0 0;
 }
 /*# sourceMappingURL=main.css.map */

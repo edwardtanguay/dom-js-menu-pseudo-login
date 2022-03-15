@@ -8,28 +8,20 @@ body {
 		margin: 0 0 10px 0;
 	}
 
-	.flashcards {
-		background: #393939;
-		padding: 10px;
-
-		.flashcard {
-			margin: 0 0 20px 0;
-			font-size: .8rem;
-
-			.front {
-				font-weight: bold;
-				.category {
-					color: white;
-				}
-			}
-
-			.back {
-				background: #111;
-				color: yellow;
-				font-family: 'Courier New', Courier, monospace;
-				font-size: .7rem;
-				padding: 3px;
+	nav {
+		ul {
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding: 5px;
+			background: #444;
+			li {
+				margin: 0 10px 0 0;
 			}
 		}
+	}
+
+	.page {
+		margin: 10px 0 0 0;
 	}
 }
