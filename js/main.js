@@ -7,6 +7,12 @@ const pageManager = (currentPageIdCode) => {
 		pageItem.elem.style.display = 'none';
 	});
 	pageItems.find(pageItem => pageItem.idCode === currentPageIdCode).elem.style.display = 'block';
+	// remove "active" class from all navElems 
+	Object.values(navItemElems).forEach(navItemElem => {
+		navItemElem.classList.remove('active');
+	});
+	// add "active" class to selected page navItem
+	navItemElems[currentPageIdCode].classList.add('active');
 }
 
 // NAV
@@ -26,6 +32,12 @@ const menuItemLoginElem = document.querySelector('nav ul li.login');
 menuItemLoginElem.addEventListener('click', () => {
 	pageManager('login');
 });
+const navItemElems = {
+	'home': menuItemHomeElem,
+	'info': menuItemInfoElem,
+	'admin': menuItemAdminElem,
+	'login': menuItemLoginElem
+};
 
 // PAGES
 const pageItems = pages.map(page => {
