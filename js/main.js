@@ -46,4 +46,4 @@ const pageItems = pages.map(page => {
 })
 
 // PAGE LOAD
-pageManager('home');
+pageManager('login');
