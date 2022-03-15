@@ -17,6 +17,14 @@ body {
 			background: #444;
 			li {
 				margin: 0 10px 0 0;
+				color: #ccc;
+				cursor: pointer;
+			}
+			li:hover {
+				color: #eee;
+			}
+			li.active {
+				color: yellow;
 			}
 		}
 	}

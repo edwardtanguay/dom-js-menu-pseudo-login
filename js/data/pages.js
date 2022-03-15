@@ -13,8 +13,8 @@ export const pages = [
 	},
 	{
 		"id": 3,
-		"idCode": "siteSettings",
-		"title": "Site Settings",
+		"idCode": "admin",
+		"title": "Admin",
 		"accessGroups": "administrators"
 	},
 	{

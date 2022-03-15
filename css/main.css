@@ -22,6 +22,16 @@ body nav ul {
 
 body nav ul li {
   margin: 0 10px 0 0;
+  color: #ccc;
+  cursor: pointer;
+}
+
+body nav ul li:hover {
+  color: #eee;
+}
+
+body nav ul li.active {
+  color: yellow;
 }
 
 body .page {
