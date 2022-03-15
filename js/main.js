@@ -1,4 +1,4 @@
-import { users } from './data/users.js';
+// import { users } from './data/users.js';
 import { pages } from './data/pages.js';
 
 // general functions
@@ -32,3 +32,6 @@ const pageItems = pages.map(page => {
 	page.elem = document.querySelector(`div.${page.idCode}`);
 	return page;
 })
+
+// PAGE LOAD
+pageManager('home');
