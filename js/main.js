@@ -3,13 +3,14 @@ import { pages } from './data/pages.js';
 
 // globals (later class properties)
 let currentPageIdCode = 'home';
-const currentUser = users[1]; 
+const currentUser = users.find(m=>m.login === 'anonymous') 
 
 const currentUserInfoElem = document.querySelector('.currentUserInfo');
 
 // general functions
 const userManager = (user) => {
-	currentUserInfoElem.innerHTML = `Logged in: ${user.firstName} ${user.lastName}`;
+	const content = user.login === 'anonymous' ? 'Please log in.' : `Logged in: ${user.firstName} ${user.lastName}`;
+	currentUserInfoElem.innerHTML = content;
 }
 const pageManager = (currentPageIdCode) => {
 	pageItems.forEach(pageItem => {

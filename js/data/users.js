@@ -9,6 +9,14 @@ export const users = [
 	},
 	{
 		"id": 2,
+		"firstName": "Anonymous",
+		"lastName": "User",
+		"login": "anonymous",
+		"password": "nnn",
+		"accessGroups": "loggedOutUsers"
+	},
+	{
+		"id": 3,
 		"firstName": "Christa",
 		"lastName": "Alsmainer",
 		"login": "christa",
