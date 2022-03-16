@@ -1,3 +1,9 @@
 - x make users
 - x make login
-- .. on page load, show Home
+- x on page load, show Home
+
+- .. currentPageIdCode global
+- .. create currentUser object
+- make menu respond to currentUser object
+	- when nobody logged in: show Home, Login
+	- when nick logged in: Home, Info
