@@ -5,6 +5,7 @@
 - x currentPageIdCode global
 - x create currentUser object
 - x show current user
+- .. make menuManager
 - .. make menu respond to currentUser object
 	- when nobody logged in: show Home, Login
 	- when nick logged in: Home, Info

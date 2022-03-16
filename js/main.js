@@ -6,13 +6,18 @@ let currentPageIdCode = 'home';
 const currentUser = users.find(m=>m.login === 'anonymous') 
 
 const currentUserInfoElem = document.querySelector('.currentUserInfo');
+const menuItemNodes = document.querySelectorAll('nav ul li');
 
 // general functions
-
+const menuManager = () => {
+	const menuItems = Array.from(menuItemNodes);// [...menuItemNodes];
+	menuItems.find(m => m.className === 'admin').style.display = 'none';
+	console.log(menuItems);
+}; 
 const userManager = (user) => {
 	const content = user.login === 'anonymous' ? 'Please log in.' : `Logged in: ${user.firstName} ${user.lastName}`;
 	currentUserInfoElem.innerHTML = content;
-}
+};
 const pageManager = (idCode) => {
 	pageItems.forEach(pageItem => {
 		pageItem.elem.style.display = 'none';
@@ -24,7 +29,7 @@ const pageManager = (idCode) => {
 	});
 	// add "active" class to selected page navItem
 	navItemElems[idCode].classList.add('active');
-}
+};
 
 // NAV
 const menuItemHomeElem = document.querySelector('nav ul li.home');
@@ -59,3 +64,4 @@ const pageItems = pages.map(page => {
 // PAGE LOAD
 pageManager(currentPageIdCode);
 userManager(currentUser);
+menuManager();
