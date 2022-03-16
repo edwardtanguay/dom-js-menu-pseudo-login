@@ -8,21 +8,22 @@ const currentUser = users.find(m=>m.login === 'anonymous')
 const currentUserInfoElem = document.querySelector('.currentUserInfo');
 
 // general functions
+
 const userManager = (user) => {
 	const content = user.login === 'anonymous' ? 'Please log in.' : `Logged in: ${user.firstName} ${user.lastName}`;
 	currentUserInfoElem.innerHTML = content;
 }
-const pageManager = (currentPageIdCode) => {
+const pageManager = (idCode) => {
 	pageItems.forEach(pageItem => {
 		pageItem.elem.style.display = 'none';
 	});
-	pageItems.find(pageItem => pageItem.idCode === currentPageIdCode).elem.style.display = 'block';
+	pageItems.find(pageItem => pageItem.idCode === idCode).elem.style.display = 'block';
 	// remove "active" class from all navElems 
 	Object.values(navItemElems).forEach(navItemElem => {
 		navItemElem.classList.remove('active');
 	});
 	// add "active" class to selected page navItem
-	navItemElems[currentPageIdCode].classList.add('active');
+	navItemElems[idCode].classList.add('active');
 }
 
 // NAV
