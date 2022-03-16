@@ -3,17 +3,34 @@ import { pages } from './data/pages.js';
 
 // globals (later class properties)
 let currentPageIdCode = 'home';
-const currentUser = users.find(m=>m.login === 'anonymous') 
+const currentUser = users.find(m => m.login === 'anonymous')
 
 const currentUserInfoElem = document.querySelector('.currentUserInfo');
 const menuItemNodes = document.querySelectorAll('nav ul li');
 
+const atLeastOneTermMatchesInLists = (list1, list2) => {
+	const list1Terms = list1.split(',');
+	const list2Terms = list2.split(',');
+	for (const list1Term of list1Terms) {
+		for (const list2Term of list2Terms) {
+			if (list1Term == list2Term) {
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
 // general functions
 const menuManager = () => {
-	const menuItems = Array.from(menuItemNodes);// [...menuItemNodes];
-	menuItems.find(m => m.className === 'admin').style.display = 'none';
-	console.log(menuItems);
-}; 
+	const currentPage = pages.find(m => m.idCode === currentPageIdCode);
+	const menuItems = Array.from(menuItemNodes);
+	pages.forEach(page => {
+		if (!atLeastOneTermMatchesInLists(currentUser.accessGroups, page.accessGroups)) {
+			menuItems.find(m => m.className === page.idCode).style.display = 'none';
+		}
+	});
+};
 const userManager = (user) => {
 	const content = user.login === 'anonymous' ? 'Please log in.' : `Logged in: ${user.firstName} ${user.lastName}`;
 	currentUserInfoElem.innerHTML = content;

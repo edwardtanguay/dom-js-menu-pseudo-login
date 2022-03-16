@@ -9,3 +9,7 @@
 - .. make menu respond to currentUser object
 	- when nobody logged in: show Home, Login
 	- when nick logged in: Home, Info
+
+- convert currentPageIdCode to currentPage
+- create tools module
+- convert all code to class: SiteManager

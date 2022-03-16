@@ -5,7 +5,7 @@ export const users = [
 		"lastName": "Randstein",
 		"login": "nick",
 		"password": "123",
-		"accessGroups": "loggedInUsers, members"
+		"accessGroups": "loggedInUsers,members"
 	},
 	{
 		"id": 2,
@@ -21,6 +21,6 @@ export const users = [
 		"lastName": "Alsmainer",
 		"login": "christa",
 		"password": "123",
-		"accessGroups": "loggedInUsers, members, administrators"
+		"accessGroups": "loggedInUsers,members,administrators"
 	}
 ];

@@ -3,7 +3,7 @@ export const pages = [
 		"id": 1,
 		"idCode": "home",
 		"title": "Home",
-		"accessGroups": "loggedInUsers, loggedOutUsers"
+		"accessGroups": "loggedInUsers,loggedOutUsers"
 	},
 	{
 		"id": 2,
