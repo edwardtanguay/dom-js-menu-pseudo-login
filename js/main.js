@@ -1,10 +1,16 @@
-// import { users } from './data/users.js';
+import { users } from './data/users.js';
 import { pages } from './data/pages.js';
 
 // globals (later class properties)
 let currentPageIdCode = 'home';
+const currentUser = users[1]; 
+
+const currentUserInfoElem = document.querySelector('.currentUserInfo');
 
 // general functions
+const userManager = (user) => {
+	currentUserInfoElem.innerHTML = `Logged in: ${user.firstName} ${user.lastName}`;
+}
 const pageManager = (currentPageIdCode) => {
 	pageItems.forEach(pageItem => {
 		pageItem.elem.style.display = 'none';
@@ -50,3 +56,4 @@ const pageItems = pages.map(page => {
 
 // PAGE LOAD
 pageManager(currentPageIdCode);
+userManager(currentUser);
