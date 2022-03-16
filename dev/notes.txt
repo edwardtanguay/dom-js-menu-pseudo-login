@@ -5,11 +5,13 @@
 - x currentPageIdCode global
 - x create currentUser object
 - x show current user
-- .. make menuManager
-- .. make menu respond to currentUser object
-	- when nobody logged in: show Home, Login
-	- when nick logged in: Home, Info
+- x make menuManager
+- x make menu respond to currentUser object
+	- x when nobody logged in: show Home, Login
+	- x when nick logged in: Home, Info
 
+- make login form work
+- logout button
 - convert currentPageIdCode to currentPage
 - create tools module
 - convert all code to class: SiteManager
