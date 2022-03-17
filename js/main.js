@@ -50,9 +50,18 @@ const atLeastOneTermMatchesInLists = (list1, list2) => {
 const menuManager = () => {
 	const currentPage = pages.find(m => m.idCode === currentPageIdCode);
 	const menuItems = Array.from(menuItemNodeElems);
+	
+	// first turn all menu items back on
+	menuItems.forEach(menuItem => {
+		menuItem.style.display = 'block';
+	})
+
 	pages.forEach(page => {
 		if (!atLeastOneTermMatchesInLists(currentUser.accessGroups, page.accessGroups)) {
-			menuItems.find(m => m.className === page.idCode).style.display = 'none';
+			menuItems.find(m => {
+				const firstClass = m.className.split(' ')[0];
+				return firstClass === page.idCode;
+			}).style.display = 'none';
 		}
 	});
 };
