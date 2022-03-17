@@ -10,7 +10,9 @@
 	- x when nobody logged in: show Home, Login
 	- x when nick logged in: Home, Info
 
-- make login form work
+- .. make login form work
+	- .. process click even on Login button
+
 - logout button
 - convert currentPageIdCode to currentPage
 - create tools module

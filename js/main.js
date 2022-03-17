@@ -2,11 +2,11 @@ import { users } from './data/users.js';
 import { pages } from './data/pages.js';
 
 // globals (later class properties)
-let currentPageIdCode = 'home';
-const currentUser = users.find(m => m.login === 'anonymous')
+let currentPageIdCode = 'login';
+const currentUser = users.find(m => m.login === 'anonymous');
 
 const currentUserInfoElem = document.querySelector('.currentUserInfo');
-const menuItemNodes = document.querySelectorAll('nav ul li');
+const menuItemNodeElems = document.querySelectorAll('nav ul li');
 
 const atLeastOneTermMatchesInLists = (list1, list2) => {
 	const list1Terms = list1.split(',');
@@ -24,7 +24,7 @@ const atLeastOneTermMatchesInLists = (list1, list2) => {
 // general functions
 const menuManager = () => {
 	const currentPage = pages.find(m => m.idCode === currentPageIdCode);
-	const menuItems = Array.from(menuItemNodes);
+	const menuItems = Array.from(menuItemNodeElems);
 	pages.forEach(page => {
 		if (!atLeastOneTermMatchesInLists(currentUser.accessGroups, page.accessGroups)) {
 			menuItems.find(m => m.className === page.idCode).style.display = 'none';
