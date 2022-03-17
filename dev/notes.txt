@@ -12,9 +12,13 @@
 
 - .. make login form work
 	- x process click even on Login button
-	- .. show login and password 
+	- x show login and password 
+	- x implement preventDefault instead of type="button"
 
 - logout button
+- button should be disabled when login or password is blank
+- implement checkbox: [x] show password
+- implement checkbox: [x] remember password (localStorage)
 - convert currentPageIdCode to currentPage
 - create tools module
 - convert all code to class: SiteManager

@@ -13,10 +13,10 @@ const fieldLoginElem = document.querySelector('.field_login');
 const fieldPasswordElem = document.querySelector('.field_password');
 
 // attach events
-loginButton.addEventListener('click', () => {
+loginButton.addEventListener('click', (e) => {
+	e.preventDefault();
 	const fieldLogin = fieldLoginElem.value;	
 	const fieldPassword = fieldPasswordElem.value;	
-	console.log(fieldLogin, fieldPassword);
 });
 
 const atLeastOneTermMatchesInLists = (list1, list2) => {
