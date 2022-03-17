@@ -5,8 +5,19 @@ import { pages } from './data/pages.js';
 let currentPageIdCode = 'login';
 const currentUser = users.find(m => m.login === 'anonymous');
 
+// define elements
 const currentUserInfoElem = document.querySelector('.currentUserInfo');
+const loginButton = document.querySelector('.btnLogin');
 const menuItemNodeElems = document.querySelectorAll('nav ul li');
+const fieldLoginElem = document.querySelector('.field_login');
+const fieldPasswordElem = document.querySelector('.field_password');
+
+// attach events
+loginButton.addEventListener('click', () => {
+	const fieldLogin = fieldLoginElem.value;	
+	const fieldPassword = fieldPasswordElem.value;	
+	console.log(fieldLogin, fieldPassword);
+});
 
 const atLeastOneTermMatchesInLists = (list1, list2) => {
 	const list1Terms = list1.split(',');

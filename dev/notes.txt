@@ -11,7 +11,8 @@
 	- x when nick logged in: Home, Info
 
 - .. make login form work
-	- .. process click even on Login button
+	- x process click even on Login button
+	- .. show login and password 
 
 - logout button
 - convert currentPageIdCode to currentPage
