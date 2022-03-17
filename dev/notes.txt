@@ -14,7 +14,8 @@
 	- x process click even on Login button
 	- x show login and password 
 	- x implement preventDefault instead of type="button"
-	- .. use login/password to define current user
+	- x use login/password to define current user
+	- .. fix bug: when users logs in, error:  Uncaught TypeError: menuItems.find(...) is undefined
 
 - logout button
 - button should be disabled when login or password is blank

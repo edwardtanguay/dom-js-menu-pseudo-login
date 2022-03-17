@@ -3,7 +3,7 @@ import { pages } from './data/pages.js';
 
 // globals (later class properties)
 let currentPageIdCode = 'login';
-const currentUser = users.find(m => m.login === 'anonymous');
+let currentUser = users.find(m => m.login === 'anonymous');
 
 // define elements
 const siteMessageElem = document.querySelector('.siteMessage');
@@ -16,10 +16,20 @@ const btnLogoutElem = document.querySelector('.btnLogout');
 // set up elements 
 btnLoginElem.addEventListener('click', (e) => {
 	e.preventDefault();
-	const fieldLogin = fieldLoginElem.value;	
+	const fieldLogin = fieldLoginElem.value;
 	const fieldPassword = fieldPasswordElem.value;
 	const foundUser = users.find(m => m.login === fieldLogin);
-	console.log(foundUser);
+	if (foundUser === undefined) {
+		siteMessageElem.innerHTML = 'User not found.';
+	} else {
+		if (foundUser.password !== fieldPassword) {
+			siteMessageElem.innerHTML = 'Password incorrect.';
+		} else {
+			currentUser = foundUser;
+			userManager(currentUser);
+			menuManager();
+		}
+	}
 });
 btnLogoutElem.style.display = 'none';
 
