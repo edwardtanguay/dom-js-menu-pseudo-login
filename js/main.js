@@ -11,8 +11,9 @@ const btnLoginElem = document.querySelector('.btnLogin');
 const menuItemNodeElems = document.querySelectorAll('nav ul li');
 const fieldLoginElem = document.querySelector('.field_login');
 const fieldPasswordElem = document.querySelector('.field_password');
+const btnLogoutElem = document.querySelector('.btnLogout');
 
-// attach events
+// set up elements 
 btnLoginElem.addEventListener('click', (e) => {
 	e.preventDefault();
 	const fieldLogin = fieldLoginElem.value;	
@@ -20,6 +21,7 @@ btnLoginElem.addEventListener('click', (e) => {
 	const foundUser = users.find(m => m.login === fieldLogin);
 	console.log(foundUser);
 });
+btnLogoutElem.style.display = 'none';
 
 const atLeastOneTermMatchesInLists = (list1, list2) => {
 	const list1Terms = list1.split(',');
