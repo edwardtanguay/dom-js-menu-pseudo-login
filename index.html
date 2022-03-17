@@ -17,7 +17,10 @@
 
 <body>
 	<h1>Community Site</h1>
-	<div class="currentUserInfo"></div>
+	<div class="topBar">
+		<div class="siteMessage"></div>
+		<button class="btnLogout">Logout</button>
+	</div>
 	<nav>
 		<ul>
 			<li class="home">Home</li>
@@ -46,11 +49,13 @@
 				<legend>Please log in:</legend>
 				<div class="row">
 					<label htmlFor="name">Login</label>
-					<input class="field_login" type="text" />
+					<input class="field_login"
+						   type="text" />
 				</div>
 				<div class="row">
 					<label htmlFor="phone">Password</label>
-					<input class="field_password" type="password" />
+					<input class="field_password"
+						   type="password" />
 				</div>
 				<div class="buttonRow">
 					<button class="btnLogin">Login</button>

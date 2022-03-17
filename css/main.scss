@@ -8,6 +8,12 @@ body {
 		margin: 0 0 10px 0;
 	}
 
+	.topBar {
+		display:flex;
+		justify-content: space-between;
+		margin: 0 0 5px 0;
+	}
+
 	nav {
 		ul {
 			display: flex;

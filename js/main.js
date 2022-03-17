@@ -6,17 +6,19 @@ let currentPageIdCode = 'login';
 const currentUser = users.find(m => m.login === 'anonymous');
 
 // define elements
-const currentUserInfoElem = document.querySelector('.currentUserInfo');
-const loginButton = document.querySelector('.btnLogin');
+const siteMessageElem = document.querySelector('.siteMessage');
+const btnLoginElem = document.querySelector('.btnLogin');
 const menuItemNodeElems = document.querySelectorAll('nav ul li');
 const fieldLoginElem = document.querySelector('.field_login');
 const fieldPasswordElem = document.querySelector('.field_password');
 
 // attach events
-loginButton.addEventListener('click', (e) => {
+btnLoginElem.addEventListener('click', (e) => {
 	e.preventDefault();
 	const fieldLogin = fieldLoginElem.value;	
-	const fieldPassword = fieldPasswordElem.value;	
+	const fieldPassword = fieldPasswordElem.value;
+	const foundUser = users.find(m => m.login === fieldLogin);
+	console.log(foundUser);
 });
 
 const atLeastOneTermMatchesInLists = (list1, list2) => {
@@ -44,7 +46,7 @@ const menuManager = () => {
 };
 const userManager = (user) => {
 	const content = user.login === 'anonymous' ? 'Please log in.' : `Logged in: ${user.firstName} ${user.lastName}`;
-	currentUserInfoElem.innerHTML = content;
+	siteMessageElem.innerHTML = content;
 };
 const pageManager = (idCode) => {
 	pageItems.forEach(pageItem => {
