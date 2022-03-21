@@ -2,7 +2,7 @@ import { users } from './data/users.js';
 import { pages } from './data/pages.js';
 
 // globals (later class properties)
-let currentPageIdCode = 'login';
+let currentPageIdCode = 'home';
 let currentUser = users.find(m => m.login === 'anonymous');
 
 // define elements
@@ -28,10 +28,22 @@ btnLoginElem.addEventListener('click', (e) => {
 			currentUser = foundUser;
 			userManager(currentUser);
 			menuManager();
+			pageManager('home');
+			btnLogoutElem.style.display = 'block';
+			fieldLoginElem.value = '';
+			fieldPasswordElem.value = '';
 		}
 	}
 });
 btnLogoutElem.style.display = 'none';
+btnLogoutElem.addEventListener('click', (e) => {
+	const anonymousUser = users.find(m => m.login === 'anonymous');
+	currentUser = anonymousUser;
+	userManager(anonymousUser);
+	menuManager();
+	pageManager('home');
+	btnLogoutElem.style.display = 'none';
+});
 
 const atLeastOneTermMatchesInLists = (list1, list2) => {
 	const list1Terms = list1.split(',');
@@ -48,9 +60,9 @@ const atLeastOneTermMatchesInLists = (list1, list2) => {
 
 // general functions
 const menuManager = () => {
-	const currentPage = pages.find(m => m.idCode === currentPageIdCode);
+	// const currentPage = pages.find(m => m.idCode === currentPageIdCode);
 	const menuItems = Array.from(menuItemNodeElems);
-	
+
 	// first turn all menu items back on
 	menuItems.forEach(menuItem => {
 		menuItem.style.display = 'block';
@@ -65,10 +77,12 @@ const menuManager = () => {
 		}
 	});
 };
+
 const userManager = (user) => {
 	const content = user.login === 'anonymous' ? 'Please log in.' : `Logged in: ${user.firstName} ${user.lastName}`;
 	siteMessageElem.innerHTML = content;
 };
+
 const pageManager = (idCode) => {
 	pageItems.forEach(pageItem => {
 		pageItem.elem.style.display = 'none';
@@ -98,6 +112,7 @@ menuItemAdminElem.addEventListener('click', () => {
 const menuItemLoginElem = document.querySelector('nav ul li.login');
 menuItemLoginElem.addEventListener('click', () => {
 	pageManager('login');
+	fieldLoginElem.focus();
 });
 const navItemElems = {
 	'home': menuItemHomeElem,
