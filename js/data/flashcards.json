@@ -1,0 +1,12 @@
+[
+	{
+		"id": 1,
+		"front": "house",
+		"back": "das Haus"
+	},
+	{
+		"id": 2,
+		"front": "car",
+		"back": "das Auto"
+	}
+]

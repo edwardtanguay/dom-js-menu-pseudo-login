@@ -12,6 +12,7 @@ const menuItemNodeElems = document.querySelectorAll('nav ul li');
 const fieldLoginElem = document.querySelector('.field_login');
 const fieldPasswordElem = document.querySelector('.field_password');
 const btnLogoutElem = document.querySelector('.btnLogout');
+const homeContentElem = document.querySelector('.homeContent');
 
 // set up elements 
 btnLoginElem.addEventListener('click', (e) => {
@@ -100,6 +101,19 @@ const pageManager = (idCode) => {
 const menuItemHomeElem = document.querySelector('nav ul li.home');
 menuItemHomeElem.addEventListener('click', () => {
 	pageManager('home');
+	(async () => {
+		const response = await fetch('js/data/flashcards.json');
+		const flashcards = await response.json();
+		homeContentElem.innerHTML = `
+	<h2>Flashcards</h2>	
+	<ul>
+	${flashcards.map(flashcard => {
+			return `<li><div>${flashcard.front}: <span class="back">${flashcard.back}</span></div></li>`;
+		}).join('')}
+	</ul>
+	`;
+	})();
+
 });
 const menuItemInfoElem = document.querySelector('nav ul li.info');
 menuItemInfoElem.addEventListener('click', () => {
@@ -131,3 +145,4 @@ const pageItems = pages.map(page => {
 pageManager(currentPageIdCode);
 userManager(currentUser);
 menuManager();
+menuItemHomeElem.click();

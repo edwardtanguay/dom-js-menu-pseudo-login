@@ -1,7 +1,6 @@
 - x make users
 - x make login
 - x on page load, show Home
-
 - x currentPageIdCode global
 - x create currentUser object
 - x show current user
@@ -9,21 +8,21 @@
 - x make menu respond to currentUser object
 	- x when nobody logged in: show Home, Login
 	- x when nick logged in: Home, Info
-
 - x make login form work
 	- x process click even on Login button
 	- x show login and password 
 	- x implement preventDefault instead of type="button"
 	- x use login/password to define current user
 	- x fix bug: when users logs in, error:  Uncaught TypeError: menuItems.find(...) is undefined
-
 - x after login, go to home page
 - x logout button
 - x delete info from login fields
 - x on login page: focus cursor
 
-- stay logged in, with localStorage
+- .. try: howto: fetch('nnnn.json')
+- read/write data from Excel
 
+- stay logged in, with localStorage
 - button should be disabled when login or password is blank
 - implement checkbox: [x] show password
 - implement checkbox: [x] remember password (localStorage)
@@ -33,6 +32,3 @@
 - data in json-server
 	- implement secure backend with data from backend
 	- use bcrypt to secure passwords
-
-- read/write data from Excel
-- try: howto: fetch('nnnn.json')
