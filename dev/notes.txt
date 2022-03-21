@@ -18,8 +18,8 @@
 - x logout button
 - x delete info from login fields
 - x on login page: focus cursor
+- x try: howto: fetch('nnnn.json')
 
-- .. try: howto: fetch('nnnn.json')
 - read/write data from Excel
 
 - stay logged in, with localStorage
