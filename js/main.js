@@ -116,6 +116,21 @@ menuItemInfoElem.addEventListener('click', () => {
 		}).join('')}
 	</ul>
 	`;
+		infoContentElem.innerHTML += `
+		<table class="blueTable">
+			<thead>
+				<tr>
+					<th>front</th>
+					<th>back</th>
+				</tr>
+			</thead>
+			<tbody>
+				${flashcards.map(flashcard => {
+			return `<tr><td>${flashcard.front}</td><td>${flashcard.back}</td></tr>`;
+		}).join('')}
+			</tbody>
+		</table>
+		`
 	})();
 });
 const menuItemAdminElem = document.querySelector('nav ul li.admin');
@@ -144,4 +159,4 @@ const pageItems = pages.map(page => {
 pageManager(currentPageIdCode);
 userManager(currentUser);
 menuManager();
-menuItemHomeElem.click();
+menuItemInfoElem.click();

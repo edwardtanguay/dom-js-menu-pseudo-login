@@ -9,7 +9,7 @@ export const pages = [
 		"id": 2,
 		"idCode": "info",
 		"title": "Info",
-		"accessGroups": "members"
+		"accessGroups": "members,loggedOutUsers"
 	},
 	{
 		"id": 3,

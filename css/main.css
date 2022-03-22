@@ -21,7 +21,7 @@ body ul {
 
 body .info span.back {
   color: #bb8819;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-family: courier;
 }
 
@@ -115,5 +115,73 @@ body form fieldset .buttonRow button {
   font-size: 1rem;
   padding: 5px;
   margin: 10px 5px 0 0;
+}
+
+body table.blueTable {
+  border: 1px solid #1c6ea4;
+  background-color: #eeeeee;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 20px 0 0 0;
+  color: black;
+}
+
+body table.blueTable td,
+body table.blueTable th {
+  border: 1px solid #aaaaaa;
+  padding: 3px 2px;
+}
+
+body table.blueTable tbody td {
+  font-size: 13px;
+}
+
+body table.blueTable tr:nth-child(even) {
+  background: #d0e4f5;
+}
+
+body table.blueTable thead {
+  background: #1c6ea4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5592bb), color-stop(66%, #327cad), to(#1c6ea4));
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1c6ea4 100%);
+  border-bottom: 2px solid #444444;
+}
+
+body table.blueTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  border-left: 2px solid #d0e4f5;
+}
+
+body table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+body table.blueTable tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #d0e4f5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dcebf7), color-stop(66%, #d4e6f6), to(#d0e4f5));
+  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #d0e4f5 100%);
+  border-top: 2px solid #444444;
+}
+
+body table.blueTable tfoot td {
+  font-size: 14px;
+}
+
+body table.blueTable tfoot .links {
+  text-align: right;
+}
+
+body table.blueTable tfoot .links a {
+  display: inline-block;
+  background: #1c6ea4;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=main.css.map */
