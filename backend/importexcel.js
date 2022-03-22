@@ -5,7 +5,8 @@ const wb = new Excel.Workbook();
 const excelPathAndFileName = './backend/data/flashcards.xlsx';
 const jsonPathAndFileName = './js/data/flashcards.json';
 
-wb.xlsx.readFile(excelPathAndFileName).then(() => {
+(async () => {
+	await wb.xlsx.readFile(excelPathAndFileName);
 	const flashcards = [];
 	const ws = wb.getWorksheet('flashcards');
 	for (let row = 2; row <= 1000; row++) {
@@ -19,13 +20,12 @@ wb.xlsx.readFile(excelPathAndFileName).then(() => {
 			flashcards.push({ front, back })
 		}
 	}
-	const jsonText = JSON.stringify(flashcards,null, 2);
+	const jsonText = JSON.stringify(flashcards, null, 2);
 	fs.writeFile(jsonPathAndFileName, jsonText, 'utf8', (err) => {
 		if (err) {
 			console.log('problem writing JSON file');
 			console.log(err);
 		}
 		console.log('JSON file saved');
-	} )
-});
-
+	});
+})();

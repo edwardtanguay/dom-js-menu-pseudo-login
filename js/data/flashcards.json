@@ -18,5 +18,9 @@
   {
     "front": "bike",
     "back": "das Fahrrad"
+  },
+  {
+    "front": "kitchen",
+    "back": "die Küche"
   }
 ]

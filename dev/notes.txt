@@ -29,8 +29,8 @@
 			- https://www.npmjs.com/package/write-excel-file
 - x create CLI command to convert excel data to json: run importexcel 
 - ,, require to import
-- .. then to async/await
-- show flashcards in HTML table
+- x then to async/await
+- .. show flashcards in HTML table
 - create frontend form, click button, send data to backend, write to Excel file
 
 - REFACTOR: convert all code to class: SiteManager
