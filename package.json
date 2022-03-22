@@ -1,0 +1,23 @@
+{
+  "name": "dom-js-menu-pseudo-login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "importexcel": "node ./backend/importexcel.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edwardtanguay/dom-js-menu-pseudo-login.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edwardtanguay/dom-js-menu-pseudo-login/issues"
+  },
+  "homepage": "https://github.com/edwardtanguay/dom-js-menu-pseudo-login#readme",
+  "dependencies": {
+    "exceljs": "^4.3.0"
+  }
+}

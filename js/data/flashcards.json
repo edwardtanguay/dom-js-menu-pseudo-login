@@ -1,12 +1,22 @@
 [
-	{
-		"id": 1,
-		"front": "house",
-		"back": "das Haus"
-	},
-	{
-		"id": 2,
-		"front": "car",
-		"back": "das Auto"
-	}
+  {
+    "front": "book",
+    "back": "das Buch"
+  },
+  {
+    "front": "keyboard",
+    "back": "die Tastatur"
+  },
+  {
+    "front": "lamp",
+    "back": "die Lampe"
+  },
+  {
+    "front": "magazine",
+    "back": "die Zeitschrift"
+  },
+  {
+    "front": "bike",
+    "back": "das Fahrrad"
+  }
 ]

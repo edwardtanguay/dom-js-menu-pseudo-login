@@ -20,10 +20,20 @@
 - x on login page: focus cursor
 - x try: howto: fetch('nnnn.json')
 
+- read/write data to/from Excel tests
+	- x possible libraries:
+		- https://www.npmjs.com/package/exceljs (3 months ago)
+		- https://www.npmjs.com/package/xlsx (6 days ago)
+		- pair:
+			- https://www.npmjs.com/package/read-excel-file
+			- https://www.npmjs.com/package/write-excel-file
+- .. create CLI command to convert excel data to json: run importexcel 
+- require to import
+- then to async/await
+- create frontend form, click button, send data to backend, write to Excel file
+
 - REFACTOR: convert all code to class: SiteManager
 - stay logged in, with localStorage
-- read/write data from Excel
-	- create CLI command to convert excel data to json: run importexcel 
 - improve login page
 	- button should be disabled when login or password is blank
 	- implement checkbox: [x] show password
