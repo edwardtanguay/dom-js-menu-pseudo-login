@@ -125,6 +125,7 @@ body table.blueTable {
   border-collapse: collapse;
   margin: 20px 0 0 0;
   color: black;
+  max-width: 300px;
 }
 
 body table.blueTable td,
