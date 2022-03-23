@@ -51,6 +51,9 @@ btnSendMailElem.addEventListener('click', () => {
 	(async () => {
 		const response = await fetch('js/data/flashcards.json');
 		const flashcards = await response.json();
+
+		const infoItems = document.querySelectorAll('.infoItem');
+
 		const html = `
 		<table>
 			<thead>
@@ -61,12 +64,12 @@ btnSendMailElem.addEventListener('click', () => {
 				</tr>
 			</thead>
 			<tbody>
-				${flashcards.map(flashcard => {
+				${flashcards.map((flashcard,index) => {
 			return `
 			<tr>
 				<td style="background:#eee;padding: 5px">${flashcard.front}</td>
 				<td style="background:#eee;padding: 5px">${flashcard.back}</td>
-				<td style="background:#eee;padding: 5px">${flashcard.info}</td>
+				<td style="background:#eee;padding: 5px">${infoItems[index].value}</td>
 			</tr>`;
 		}).join('')}
 			</tbody>
@@ -174,7 +177,7 @@ menuItemInfoElem.addEventListener('click', () => {
 			<tr>
 				<td>${flashcard.front}</td>
 				<td>${flashcard.back}</td>
-				<td>${flashcard.info}</td>
+				<td><input class="infoItem" type="text" /></td>
 			</tr>`;
 		}).join('')}
 			</tbody>
