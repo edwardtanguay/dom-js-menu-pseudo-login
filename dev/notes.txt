@@ -31,8 +31,14 @@
 - ,, require to import
 - x then to async/await
 - x show flashcards in HTML table
-- .. create frontend form, click button, send data to backend, write to Excel file
 
+- .. make button "Send Info via E-Mail" which sends tabel to e-mail address
+	- x find email service npm?
+	- x make a button test
+	- .. when button clicked, send email
+	- change info before sending mail
+
+- create frontend form, click button, send data to backend, write to Excel file
 - REFACTOR: convert all code to class: SiteManager
 - stay logged in, with localStorage
 - improve login page

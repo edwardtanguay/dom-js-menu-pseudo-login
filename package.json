@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "importexcel": "node ./backend/importexcel.js"
+    "importexcel": "node ./backend/importexcel.js",
+    "sendmail": "node ./backend/sendmail.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/edwardtanguay/dom-js-menu-pseudo-login#readme",
   "dependencies": {
+    "@emailjs/browser": "^3.4.0",
     "exceljs": "^4.3.0"
   }
 }

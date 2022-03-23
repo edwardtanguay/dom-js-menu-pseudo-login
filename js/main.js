@@ -13,6 +13,7 @@ const fieldLoginElem = document.querySelector('.field_login');
 const fieldPasswordElem = document.querySelector('.field_password');
 const btnLogoutElem = document.querySelector('.btnLogout');
 const infoContentElem = document.querySelector('.infoContent');
+const btnSendMailElem = document.querySelector('.btnSendMail');
 
 // set up elements 
 btnLoginElem.addEventListener('click', (e) => {
@@ -44,6 +45,9 @@ btnLogoutElem.addEventListener('click', (e) => {
 	menuManager();
 	pageManager('home');
 	btnLogoutElem.style.display = 'none';
+});
+btnSendMailElem.addEventListener('click', () => {
+	alert('ok');
 });
 
 const atLeastOneTermMatchesInLists = (list1, list2) => {
@@ -159,7 +163,11 @@ const navItemElems = {
 const pageItems = pages.map(page => {
 	page.elem = document.querySelector(`div.${page.idCode}`);
 	return page;
-})
+});
+
+function sendMail() {
+	console.log('sending mail...');
+}
 
 // PAGE LOAD
 pageManager(currentPageIdCode);
