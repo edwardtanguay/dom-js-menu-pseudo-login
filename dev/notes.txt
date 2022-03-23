@@ -30,8 +30,8 @@
 - x create CLI command to convert excel data to json: run importexcel 
 - ,, require to import
 - x then to async/await
-- .. show flashcards in HTML table
-- create frontend form, click button, send data to backend, write to Excel file
+- x show flashcards in HTML table
+- .. create frontend form, click button, send data to backend, write to Excel file
 
 - REFACTOR: convert all code to class: SiteManager
 - stay logged in, with localStorage

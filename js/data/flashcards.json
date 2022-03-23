@@ -1,26 +1,47 @@
 [
   {
     "front": "book",
-    "back": "das Buch"
+    "back": "das Buch",
+    "info": "nice word"
   },
   {
     "front": "keyboard",
-    "back": "die Tastatur"
+    "back": "die Tastatur",
+    "info": ""
   },
   {
     "front": "lamp",
-    "back": "die Lampe"
+    "back": "die Lampe",
+    "info": ""
   },
   {
     "front": "magazine",
-    "back": "die Zeitschrift"
+    "back": "die Zeitschrift",
+    "info": ""
   },
   {
     "front": "bike",
-    "back": "das Fahrrad"
+    "back": "das Fahrrad",
+    "info": "also velo"
   },
   {
     "front": "kitchen",
-    "back": "die Küche"
+    "back": "die Küche",
+    "info": ""
+  },
+  {
+    "front": "computer",
+    "back": "der Rechner",
+    "info": ""
+  },
+  {
+    "front": "sink",
+    "back": "das Waschbecken",
+    "info": "hard word"
+  },
+  {
+    "front": "note",
+    "back": "das Zettel",
+    "info": "useful word"
   }
 ]

@@ -122,11 +122,17 @@ menuItemInfoElem.addEventListener('click', () => {
 				<tr>
 					<th>front</th>
 					<th>back</th>
+					<th>info</th>
 				</tr>
 			</thead>
 			<tbody>
 				${flashcards.map(flashcard => {
-			return `<tr><td>${flashcard.front}</td><td>${flashcard.back}</td></tr>`;
+					return `
+			<tr>
+				<td>${flashcard.front}</td>
+				<td>${flashcard.back}</td>
+				<td>${flashcard.info}</td>
+			</tr>`;
 		}).join('')}
 			</tbody>
 		</table>

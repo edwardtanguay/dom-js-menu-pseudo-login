@@ -12,12 +12,17 @@ const jsonPathAndFileName = './js/data/flashcards.json';
 	for (let row = 2; row <= 1000; row++) {
 		const frontCell = `A${row}`;
 		const backCell = `B${row}`;
+		const infoCell = `C${row}`;
 		const front = ws.getCell(frontCell).value;
 		const back = ws.getCell(backCell).value;
+		let info = ws.getCell(infoCell).value;
+
+		if (info === null) info = '';
+		
 		if (front === null) {
 			break;
 		} else {
-			flashcards.push({ front, back })
+			flashcards.push({ front, back, info })
 		}
 	}
 	const jsonText = JSON.stringify(flashcards, null, 2);
