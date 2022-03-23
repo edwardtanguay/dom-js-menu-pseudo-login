@@ -35,8 +35,11 @@
 - .. make button "Send Info via E-Mail" which sends tabel to e-mail address
 	- x find email service npm?
 	- x make a button test
-	- .. when button clicked, send email
-	- change info before sending mail
+	- x when button clicked, send email
+	- x send the whole HTML table, code in one function, call from info page and send mail
+	- .. change info before sending mail
+
+- try: https://www.npmjs.com/package/emailjs	
 
 - create frontend form, click button, send data to backend, write to Excel file
 - REFACTOR: convert all code to class: SiteManager

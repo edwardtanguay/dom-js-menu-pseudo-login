@@ -47,7 +47,46 @@ btnLogoutElem.addEventListener('click', (e) => {
 	btnLogoutElem.style.display = 'none';
 });
 btnSendMailElem.addEventListener('click', () => {
-	alert('ok');
+
+	(async () => {
+		const response = await fetch('js/data/flashcards.json');
+		const flashcards = await response.json();
+		const html = `
+		<table>
+			<thead>
+				<tr>
+					<th style="background:#ddd;font-weight: bold">front</th>
+					<th style="background:#ddd;font-weight: bold">back</th>
+					<th style="background:#ddd;font-weight: bold">info</th>
+				</tr>
+			</thead>
+			<tbody>
+				${flashcards.map(flashcard => {
+			return `
+			<tr>
+				<td style="background:#eee;padding: 5px">${flashcard.front}</td>
+				<td style="background:#eee;padding: 5px">${flashcard.back}</td>
+				<td style="background:#eee;padding: 5px">${flashcard.info}</td>
+			</tr>`;
+		}).join('')}
+			</tbody>
+		</table>
+		`;
+
+		// SEND MAIL
+		const templateParams = {
+			table: html
+		};
+		emailjs.send('service_e1g2ktl', 'template_6bynugf', templateParams)
+			.then(function (response) {
+				console.log('SUCCESS!', response.status, response.text);
+			}, function (error) {
+				console.log('FAILED...', error);
+			});
+
+	})();
+
+
 });
 
 const atLeastOneTermMatchesInLists = (list1, list2) => {
@@ -131,7 +170,7 @@ menuItemInfoElem.addEventListener('click', () => {
 			</thead>
 			<tbody>
 				${flashcards.map(flashcard => {
-					return `
+			return `
 			<tr>
 				<td>${flashcard.front}</td>
 				<td>${flashcard.back}</td>
