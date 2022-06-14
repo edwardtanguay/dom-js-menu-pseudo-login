@@ -43,5 +43,10 @@
     "front": "note",
     "back": "das Zettel",
     "info": "useful word"
+  },
+  {
+    "front": "scissors",
+    "back": "die Schere",
+    "info": "ok"
   }
 ]
